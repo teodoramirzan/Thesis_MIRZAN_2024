@@ -1,0 +1,28 @@
+digraph {
+	A [label=Start color="#cdc2cf" shape=circle style=filled]
+	B [label="Verificare sursă: freesound sau kaggle?" color="#c2d1f0" shape=diamond style=filled]
+	C [label="Descărcare sunete de la sursă" color="#f0c2c2" shape=box style=filled]
+	D [label="Redenumirea automată a fișierelor" color="#f0c2c2" shape=box style=filled]
+	E [label="Preprocesarea sunetelor" color="#f0c2c2" shape=box style=filled]
+	F [label="Extracția caracteristicilor și crearea fișierului CSV" color="#f0c2c2" shape=box style=filled]
+	G [label="Antrenarea modelelor și salvarea lor" color="#f0c2c2" shape=box style=filled]
+	H [label="Transferul sunetelor de pe Raspberry Pi pe laptop" color="#f0c2c2" shape=box style=filled]
+	I [label="Predicție pe baza sunetelor înregistrate" color="#f0c2c2" shape=box style=filled]
+	J [label="Generarea metricilor de performanță și a matricilor de confuzie" color="#f0c2c2" shape=box style=filled]
+	K [label="Integrarea cu interfața HTML" color="#f0c2c2" shape=box style=filled]
+	L [label="Testarea finală a sistemului" color="#f0c2c2" shape=box style=filled]
+	M [label=End color="#cdc2cf" shape=circle style=filled]
+	A -> B
+	B -> C [label=Yes]
+	B -> D [label=No]
+	C -> D
+	D -> E
+	E -> F
+	F -> G
+	G -> H
+	H -> I
+	I -> J
+	J -> K
+	K -> L
+	L -> M
+}

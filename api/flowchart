@@ -1,0 +1,28 @@
+digraph {
+	A [label=Start]
+	B [label="Source Check: freesound or kaggle?"]
+	C [label="Download Sounds from Source"]
+	D [label="Automatic Renaming of Files"]
+	E [label="Sound Preprocessing"]
+	F [label="Feature Extraction and CSV File Creation"]
+	G [label="Training Models and Saving Them"]
+	H [label="Transfer Sounds from Raspberry Pi to Laptop"]
+	I [label="Prediction Based on Recorded Sounds"]
+	J [label="Generating Performance Metrics and Confusion Matrices"]
+	K [label="Integration with HTML Interface"]
+	L [label="Final System Testing"]
+	M [label=End]
+	A -> B
+	B -> C [label=Yes]
+	B -> D [label=No]
+	C -> D
+	D -> E
+	E -> F
+	F -> G
+	G -> H
+	H -> I
+	I -> J
+	J -> K
+	K -> L
+	L -> M
+}
